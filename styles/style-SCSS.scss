@@ -1,0 +1,22 @@
+@import "zeroing";
+@import "header";
+@import "management";
+@import "carousel";
+@import "contact";
+@import "accordion";
+@import "footer";
+@import "owl.theme.default.min.css";
+@import "owl.carousel.min.css";
+@import "../fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css";
+@import "https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap";
+
+$FF_Raleway: 'Raleway', sans-serif;
+$FF_OpenSans:'Open Sans', sans-serif;
+$FF_fontawesome:'Font Awesome 5 Free';
+
+@mixin max-screen($res) {
+  @media screen and (max-width: $res) {
+    @content;
+  }
+}

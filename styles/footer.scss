@@ -1,0 +1,54 @@
+.container-footer{
+  height: 52px;
+  background-color: #24282f;
+  border: solid 1px #42464c;
+  padding: 0 308px ;
+  @include max-screen(823px){
+    padding: 0 180px;
+  }
+  @include max-screen(640px){
+    padding: 0 150px;
+  }
+  @include max-screen(414px){
+    display: block;
+    padding: 0 135px;
+    height: 80px;
+  }
+  @include max-screen(375px){
+      padding: 0 110px;
+    height: 90px;
+    }
+  @include max-screen(320px){
+      padding: 0 90px;
+    }
+    p{
+      font-family: $FF_OpenSans;
+      font-weight: 400;
+      font-size: 10px;
+      color:#6e7279;
+      float: left;
+      padding-top: 20px;
+    }
+  .icon_2{
+    a{
+      display: inline-block;
+      width: 25px;
+     line-height: 25px;
+      border: solid 1px #565a61;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 14px;
+      color:#565a61;
+      float: right;
+      margin: 12px 4px;
+      &:hover{
+        background-color:#b5a263;
+        color: white;
+        transition: 0.3s
+      }
+    }
+  }
+}
+.icon_2> .fab{
+  text-align: center!important;
+}

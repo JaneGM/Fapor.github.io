@@ -1,0 +1,190 @@
+$FF_OpenSans:'Open Sans', sans-serif;
+$FF_Raleway: 'Raleway', sans-serif;
+@mixin max-screen($res) {
+  @media screen and (max-width: $res) {
+    @content;
+  }
+}
+.header{
+  background-color: #24282f;
+  padding-top: 30px;
+  .container-header{
+      img{
+        margin: 0 0 30px 225px;
+        @include max-screen(1024px){
+          margin: 0 0 30px 150px;
+        }
+        @include max-screen(992px){
+          margin: 0 0 20px 180px ;
+        }
+        @include max-screen(768px){
+          margin: 0 0 20px 120px;
+        }
+        @include max-screen(568px){
+          margin: 0 0 20px 60px;
+        }
+        @include max-screen(414px){
+          margin: 0 0 20px 40px;
+        }
+      }
+    }
+  }
+.main {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  width: calc(100% - 0px);
+  height: 100vh;
+  background-color: #eeeeee;
+  transition: 0.55s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transform: scale(1) translate3d(0, 0, 0);
+  clip-path: inset(0 0 0 0);
+  will-change: width, height, opacity, transform, clip-path;
+  z-index: 1; }
+.main.is-active {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  width: calc(100vw - 0px);
+  pointer-events: none;
+  opacity: 0.25;
+  transform: scale(0.9) translate3d(60%, 0, 0); }
+@media (min-width: 600px) {
+  .main.is-active {
+    transform: scale(0.9) translate3d(40%, 0, 0); } }
+.main.is-transition-out {
+  clip-path: inset(0 0 0 100%); }
+
+.nav__trigger {
+  display: block;
+  position: absolute;
+  top: 25px;
+  right: 100px;
+  padding: 8px 0;
+  transition: 0.2s ease-in-out;
+  z-index: 99;
+  @include max-screen(568px){
+    right: 50px;
+  }
+}
+.nav__trigger .bars {
+  position: relative; }
+.nav__trigger .bars, .nav__trigger .bars:before, .nav__trigger .bars:after {
+  width: 28px;
+  height: 4px;
+  background-color: #b5a263;
+  transition: 0.2s ease-in-out;
+  border-radius: 4px; }
+.nav__trigger .bars:before, .nav__trigger .bars:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform; }
+.nav__trigger .bars:before {
+  transform: translateY(-8px); }
+.nav__trigger .bars:after {
+  transform: translateY(8px); }
+.nav__trigger.is-active {
+  transform: rotate(-45deg); }
+.nav__trigger.is-active .bars:before, .nav__trigger.is-active .bars:after {
+  transform: translateX(0) rotate(-90deg); }
+
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #191b22;
+  z-index: 0; }
+
+.nav__list {
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding-left: 60px;
+  list-style:none;
+  font-family: $FF_OpenSans;
+  transform: translateY(-50%); }
+.nav__list .nav__item {
+  padding: 0.5rem 1rem; }
+@media (min-width: 600px) {
+  .nav__list .nav__item {
+    width: 33.3333333333%;
+    padding: 0.5rem 1rem; } }
+.nav__list a {
+  display: inline-block;
+  font-size: 12px;
+  color: white;
+  text-transform: uppercase;
+  line-height: 1.5; }
+.nav__list a:hover {
+  color: #b1b7cb; }
+.nav__list a.is-active {
+  color: #d2d5e1; }
+@media (min-width: 600px) {
+  .nav__list a {
+    font-size: 1.5rem; } }
+//блок на фоне
+.bg {
+  background-image: url('../images/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 225px;
+
+  .container-about-us {
+    margin: 0 0 0 225px;
+    color: white;
+    @include max-screen(1024px){
+      margin: 0 0 0 150px;
+    }
+    @include max-screen(992px){
+      margin: 0 0 20px 180px ;
+    }
+    @include max-screen(768px){
+      margin: 0 10px 20px 120px;
+    }
+    @include max-screen(568px){
+      margin: 0 40px 20px 60px;
+    }
+    @include max-screen(414px){
+      margin: 0 40px 20px 40px;
+    }
+    .about-us {
+      padding-top: 72px;
+      text-transform: uppercase;
+      font-family: $FF_Raleway;
+      font-weight: 700;
+      font-size: 32px;
+      @include max-screen(768px){
+        font-size: 26px;
+        padding-top: 50px;
+      }
+      @include max-screen(414px){
+        font-size: 22px;
+        padding-top: 40px;
+      }
+    }
+
+    .info-about-us {
+      padding-top: 12px;
+      max-width: 628px;
+      font-family: $FF_OpenSans;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 22px;
+      @include max-screen(768px){
+        max-width:528px ;
+        font-size: 10px;
+      }
+      @include max-screen(414px){
+        max-width: 300px;
+      }
+    }
+  }
+}

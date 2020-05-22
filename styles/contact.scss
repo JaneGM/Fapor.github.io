@@ -1,0 +1,184 @@
+.container-info {
+  height: 233px;
+  background-color: #2b2f35;
+  @include max-screen(667px) {
+    padding: 40px 0 0 0;
+  }
+  @include max-screen(568px){
+    height: auto;
+  }
+
+  .container-block {
+    max-width: 892px;
+    padding-top: 62px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    @include max-screen(1024px) {
+      max-width: 800px;
+    }
+    @include max-screen(992px) {
+      max-width: 750px;
+    }
+    @include max-screen(768px) {
+      max-width: 680px;
+    }
+    @include max-screen(667px) {
+      max-width: 600px;
+      padding: 0;
+    }
+    @include max-screen(568px) {
+      max-width: 470px;
+    }
+    @include max-screen(414px) {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      margin: 0 0 10px 40px;
+    }
+
+    .block-1 {
+      width: 234px;
+      @include max-screen(768px) {
+        max-width: 210px;
+      }
+      @include max-screen(667px) {
+        max-width: 180px;
+      }
+      @include max-screen(568px) {
+        max-width: 130px;
+      }
+      @include max-screen(414px){
+        max-width: 300px;
+      }
+
+      h3 {
+        text-transform: uppercase;
+        color: #b5a263;
+        font-family: $FF_OpenSans;
+        font-weight: 600;
+        font-size: 11px;
+        padding: 0 0 22px 0;
+      }
+
+      p {
+        color: #6e7279;
+        font-family: $FF_OpenSans;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 18px;
+      }
+    }
+
+    .block-2 {
+      max-width: 234px;
+      padding-bottom: 33px;
+      @include max-screen(768px) {
+        max-width: 210px;
+      }
+      @include max-screen(667px) {
+        max-width: 180px;
+      }
+      @include max-screen(568px) {
+        max-width: 130px;
+      }
+      @include max-screen(414px){
+        max-width: 300px;
+      }
+
+      h3 {
+        text-transform: uppercase;
+        color: #b5a263;
+        font-family: $FF_OpenSans;
+        font-weight: 600;
+        font-size: 11px;
+        padding: 0 0 22px 0;
+        @include max-screen(414px){
+          padding: 20px 0;
+        }
+      }
+
+      p {
+        color: #6e7279;
+        font-family: $FF_OpenSans;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 18px;
+      }
+    }
+
+    .block-3 {
+      max-width: 240px;
+      @include max-screen(568px){
+        max-width:180px ;
+      }
+      @include max-screen(414px) {
+        margin: 0 0 20px 0;
+      }
+      @include max-screen(414px){
+      max-width: 240px;
+      }
+      h3 {
+        text-transform: uppercase;
+        color: #b5a263;
+        font-family: $FF_OpenSans;
+        font-weight: 600;
+        font-size: 11px;
+        padding: 0 0 22px 0;
+      }
+
+      label {
+        display: block;
+
+        input {
+          height: 28px;
+          width: 238px;
+          color: #6e7279;
+          font-family: $FF_OpenSans;
+          font-weight: 400;
+          font-size: 11px;
+          border: solid 1px #5b5f66;
+          background-color: #2b2f35;
+          padding-left: 8px;
+          margin-top: 18px;
+          text-align: center;
+          @include max-screen(812px) {
+            width: 170px;
+            margin: 0;
+          }
+          @include max-screen(568px) {
+            max-width: 160px;
+          }
+        }
+
+        button {
+          display: block;
+          height: 28px;
+          width: 238px;
+          margin-top: 8px;
+          border: solid 1px #5b5f66;
+          background-color: #2b2f35;
+          font-family: $FF_OpenSans;
+          font-weight: 400;
+          font-size: 11px;
+          color: #6e7279;
+          text-transform: uppercase;
+
+          &:hover {
+            background-color: #b5a263;
+            color: white;
+            transition: 0.5s;
+          }
+
+          @include max-screen(812px) {
+            width: 170px;
+          }
+          @include max-screen(568px) {
+            max-width: 160px;
+          }
+        }
+      }
+    }
+  }
+}
+

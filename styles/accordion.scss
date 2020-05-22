@@ -1,0 +1,73 @@
+$FF_fontawesome:'Font Awesome 5 Free';
+.container-accordion{
+  max-width: 1200px;
+  margin: 20px;
+  padding: 15px;
+  margin: auto;
+  @include max-screen(375px){
+    margin: 10px;
+    padding: 7px;
+  }
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+  background-color: #eeeeee;
+  border-radius: 0;
+  color: #b5a263;
+  border: none;
+  font-family: $FF_OpenSans;
+  font-weight: 600;
+  font-size: 30px;
+  @include max-screen(414px){
+    font-size: 24px;
+  }
+}
+.ui-accordion .ui-accordion-header{
+  padding: 15px 0 15px 17px;
+  font-family: $FF_OpenSans;
+  font-weight: 400;
+  font-size: 22px;
+  outline: none;
+  @include max-screen(414px){
+    font-size: 16px;
+  }
+}
+.ui-accordion .ui-accordion-header:before{
+  content: "";
+  display: inline-block;
+  height: 4px;
+  width: 4px;
+  border-radius: 50px;
+  margin-right: 10px;
+  color:#b5a263 ;
+  position: relative;
+  top: -5px;
+  background-color: #c2ae6b;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{
+  background-color: #f7f7f7;
+}
+.ui-widget-content{
+  background-color: #f7f7f7;
+}
+.ui-icon{
+  position: absolute;
+  right: 39px;
+  width: 27px;
+  height: 27px;
+  background-position: inherit;
+  background-image: none;
+  text-indent: 0;
+  text-align: right;
+  top: 21px;
+  font-weight: 900;
+  font-family: $FF_fontawesome;
+}
+.ui-icon:before{
+  content: "\f054";
+}
+.ui-accordion .ui-accordion-header .ui-state-hover span{
+  background-image: none;
+}
+.ui-state-active .ui-icon, .ui-button:active .ui-icon{
+  transform: rotate(90deg);
+}

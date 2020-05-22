@@ -1,0 +1,67 @@
+.container-info {
+  height: 233px;
+  background-color: #2b2f35;
+  padding-top: 62px; }
+
+.float_1 {
+  width: 234px;
+  float: left;
+  padding-bottom: 33px;
+  margin-left: 305px; }
+
+.float_1 h3 {
+  text-transform: uppercase;
+  color: #b5a263;
+  font-size: 13px; }
+
+.float_1 p {
+  color: #6e7279;
+  font-size: 12px;
+  line-height: 20px; }
+
+.float_2 {
+  width: 234px;
+  float: left;
+  padding-bottom: 33px;
+  margin-left: 135px; }
+
+.float_2 h3 {
+  text-transform: uppercase;
+  color: #b5a263;
+  font-size: 13px; }
+
+.float_2 p {
+  color: #6e7279;
+  font-size: 12px;
+  line-height: 20px; }
+
+.float_3 {
+  margin-left: 135px; }
+
+.float_3 h3 {
+  text-transform: uppercase;
+  color: #b5a263;
+  font-size: 13px; }
+
+.float_3 lable {
+  display: block; }
+
+.float_3 input {
+  height: 28px;
+  width: 238px;
+  color: #5b5f66;
+  border: solid 2px #5b5f66;
+  background-color: #2b2f35;
+  padding-left: 8px;
+  margin-top: 18px;
+  text-align: left; }
+
+.float_3 button {
+  display: block;
+  height: 28px;
+  width: 238px;
+  margin-top: 8px;
+  background-color: #b5a263;
+  color: white; }
+
+/*# sourceMappingURL=contact.css.map */
